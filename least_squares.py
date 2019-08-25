@@ -192,11 +192,9 @@ T5 = T5.dot(noisy_y[ny5:])
 
 y_est5 = P5.dot(T5)
 y_est5 = np.append(noisy_y[0:ny5], y_est5, axis = 0)
-print(noisy_y)
-print(y_est5)
+
 erro5 = noisy_y - y_est5
 
 MSE5 = 0
 for i in range(len(erro5)):
     MSE5 += erro5[i]**2
-print(MSE5)
